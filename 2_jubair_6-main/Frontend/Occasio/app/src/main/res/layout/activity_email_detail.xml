@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <!-- Subject -->
+    <TextView
+        android:id="@+id/email_detail_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Subject"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary_fall"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Sent At -->
+    <TextView
+        android:id="@+id/email_detail_sent_at"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sent: Jan 15, 2025 10:30"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary_fall"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Template Name -->
+    <TextView
+        android:id="@+id/email_detail_template_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Template: WelcomeEmail"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary_fall"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_secondary_fall"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Email Body (WebView for HTML) -->
+    <WebView
+        android:id="@+id/email_detail_body_webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

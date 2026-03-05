@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Occasio</string>
+    
+    <!-- App Description -->
+    <string name="app_tagline">Discover Campus Events at Iowa State</string>
+    <string name="app_description">Find and attend events organized by clubs, companies, and students on campus</string>
+    
+    <!-- Login Activity -->
+    <string name="login_title">Welcome to Occasio</string>
+    <string name="login_subtitle">Sign in to discover campus events</string>
+    <string name="login_button">Sign In</string>
+    <string name="signup_button">Create Account</string>
+    <string name="org_login_button">Organization Login</string>
+    
+    <!-- Signup Activity -->
+    <string name="signup_title">Join Occasio</string>
+    <string name="signup_subtitle">Create your account to start discovering events</string>
+    <string name="back_to_login">Already have an account? Sign In</string>
+    <string name="delete_account_button">Delete Account</string>
+    
+    <!-- Main Activity -->
+    <string name="welcome_message">Welcome to Occasio!</string>
+    <string name="dashboard_subtitle">Discover events happening on campus</string>
+    <string name="browse_events_button">🎪 Browse My Events</string>
+    <string name="all_events_button">🍂 View All Events</string>
+    <string name="search_friends_button">👥 Search Friends</string>
+    <string name="my_friends_button">👫 My Friends</string>
+    <string name="edit_profile_button">✏️ Edit Profile</string>
+    <string name="favorites_button">❤️ My Favorites</string>
+    <string name="logout_button">Logout</string>
+    
+    <!-- Event Management -->
+    <string name="create_event_button">Create New Event</string>
+    <string name="manage_events_button">Manage Events</string>
+    <string name="edit_event_button">Edit Event</string>
+    <string name="delete_event_button">Delete Event</string>
+    <string name="favorite_event_button">❤️ Favorite</string>
+    <string name="unfavorite_event_button">💔 Unfavorite</string>
+    
+    <!-- Common Fields -->
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="fullname_hint">Full Name</string>
+    <string name="event_title_hint">Event Title</string>
+    <string name="event_description_hint">Event Description</string>
+    <string name="event_location_hint">Location</string>
+    <string name="event_date_hint">Date &amp; Time</string>
+    
+    <!-- Messages -->
+    <string name="login_successful">Welcome back!</string>
+    <string name="signup_successful">Account created successfully!</string>
+    <string name="account_deleted">Account deleted successfully!</string>
+    <string name="logout_successful">Logged out successfully!</string>
+    <string name="event_created">Event created successfully!</string>
+    <string name="event_updated">Event updated successfully!</string>
+    <string name="event_deleted">Event deleted successfully!</string>
+    <string name="event_favorited">Event added to favorites!</string>
+    <string name="event_unfavorited">Event removed from favorites!</string>
+    
+    <!-- Friends Management -->
+    <string name="friend_request_sent">Friend request sent to %1$s!</string>
+    <string name="friend_removed">Removed %1$s from friends</string>
+    <string name="friend_removed_notification">%1$s has been removed from your friends list.</string>
+    <string name="remove_friend_confirm">Are you sure you want to remove %1$s from your friends list?</string>
+    <string name="no_friends_message">You don\'t have any friends yet.\nStart by searching for friends!</string>
+    <string name="no_search_results">No friends found matching your search</string>
+    
+    <!-- Errors -->
+    <string name="fill_all_fields">Please fill in all fields</string>
+    <string name="username_too_short">Username must be at least 3 characters</string>
+    <string name="password_too_short">Password must be at least 6 characters</string>
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="passwords_dont_match">Passwords do not match</string>
+    <string name="network_error">Network error occurred</string>
+    <string name="event_title_too_short">Event title must be at least 5 characters</string>
+    <string name="event_description_too_short">Event description must be at least 10 characters</string>
+    
+    <!-- Forgot Password -->
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forgot_password_instructions">Enter your email address and we\'ll send you instructions to reset your password.</string>
+    <string name="send_reset_link_button">Send Reset Link</string>
+    <string name="forgot_password_success">Password reset instructions sent to your email!</string>
+    <string name="forgot_password_error">Failed to send reset link. Please try again.</string>
+    <string name="email_not_found">Email not found. Please check your email address.</string>
+    <string name="remember_password">Remember your password?</string>
+    <string name="back_to_login_from_forgot">Back to Login</string>
+</resources>

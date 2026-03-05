@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background_color"
+    android:gravity="center">
+
+    <!-- Header with Iowa State Theme -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organization Login"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/text_primary_fall"
+        android:shadowColor="@color/fall_brown"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:textSize="18sp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/secondary_text_color" />
+
+    <!-- Login Form Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_style"
+        android:padding="24dp"
+        android:layout_marginBottom="24dp">
+
+        <EditText
+            android:id="@+id/org_login_name_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Organization Name"
+            android:inputType="text"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edittext_background"
+            android:padding="16dp"
+            android:textColor="@color/primary_text_color"
+            android:textColorHint="@color/secondary_text_color"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/org_login_password_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_background"
+            android:padding="16dp"
+            android:textColor="@color/primary_text_color"
+            android:textColorHint="@color/secondary_text_color"
+            android:textSize="16sp" />
+
+        <!-- Remember Me Checkbox -->
+        <CheckBox
+            android:id="@+id/org_login_remember_me_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:textColor="@color/primary_text_color"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:buttonTint="@color/text_primary_fall" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/org_login_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login as Organization"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_primary_fall"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/org_login_signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Organization Account"
+        android:background="@drawable/button_secondary_fall"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        android:padding="14dp" />
+
+</LinearLayout>

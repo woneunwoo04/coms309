@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_fall">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organization Profile"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Organization Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organization Information"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Organization Name -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Organization Name *"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary_fall"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/org_profile_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Organization Name"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background_fall"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary_fall"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/org_profile_description_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:hint="Organization description"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background_fall"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Contact Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Email"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary_fall"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/org_profile_contact_email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="contact@organization.com"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background_fall"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Contact Phone -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Phone"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary_fall"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/org_profile_contact_phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="(555) 123-4567"
+                    android:inputType="phone"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background_fall"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Website -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary_fall"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/org_profile_website_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="https://www.organization.com"
+                    android:inputType="textUri"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background_fall"
+                    android:padding="16dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Stripe Payment Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Information (Stripe)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Stripe Connect Status -->
+                <TextView
+                    android:id="@+id/org_profile_stripe_status_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stripe Connect: Not Connected"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary_fall"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Bank Account Last 4 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bank Account Last 4 Digits"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary_fall"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/org_profile_bank_last4_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="1234"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background_fall"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Bank Account Type -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bank Account Type"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary_fall"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/org_profile_bank_type_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="checking or savings"
+                    android:textSize="16sp"
+                    android:background="@drawable/edit_text_background_fall"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Note about Stripe Connect -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Note: For demo purposes, Stripe Connect can be marked as connected. In production, this would require actual Stripe Connect account setup."
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary_fall"
+                    android:textStyle="italic"
+                    android:padding="8dp"
+                    android:background="@color/card_background_fall" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/org_profile_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save Changes"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_on_fall"
+            android:background="@drawable/button_primary_fall"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/org_profile_back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Back"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_fall"
+            android:background="@drawable/button_secondary_fall" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <include
+        layout="@layout/bottom_navigation_bar_organization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

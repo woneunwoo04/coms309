@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+    
+    <!-- Main Content Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+    <!-- Welcome Header -->
+    <TextView
+        android:id="@+id/main_welcome_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_message"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/text_primary_fall"
+        android:shadowColor="@color/fall_brown"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover events happening on campus"
+        android:textSize="16sp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/text_secondary_fall" />
+
+    <!-- Action Cards Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_style"
+        android:padding="24dp"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/main_manage_users_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 My Events"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_primary_fall"
+            android:textColor="@color/text_on_fall"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/main_all_events_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔍 Discover Events"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_secondary_fall"
+            android:textColor="@color/text_on_fall"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/main_friends_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 Friends"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_primary_fall"
+            android:textColor="@color/text_on_fall"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/main_groups_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 Groups"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_secondary_fall"
+            android:textColor="@color/text_on_fall"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/main_edit_profile_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✏️ Edit Profile"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_primary_fall"
+            android:textColor="@color/text_on_fall"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/main_favorites_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="❤️ My Favorites"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_primary_fall"
+            android:textColor="@color/text_on_fall"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/main_messages_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💬 Messages"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_secondary_fall"
+            android:textColor="@color/text_on_fall"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/main_logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout_button"
+        android:background="@drawable/button_secondary_fall"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        android:padding="14dp" />
+
+    </LinearLayout>
+    
+    </ScrollView>
+    
+    <!-- Floating Notification Bubble (Bottom Right) -->
+    <RelativeLayout
+        android:id="@+id/notification_bubble_container"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/notification_bubble_bg"
+        android:elevation="8dp"
+        android:clickable="true"
+        android:focusable="true">
+        
+        <ImageView
+            android:id="@+id/notification_bubble_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true"
+            android:src="@android:drawable/ic_dialog_email"
+            android:tint="@android:color/white" />
+        
+        <!-- Badge for unread count -->
+        <TextView
+            android:id="@+id/notification_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/notification_badge_bg"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:minWidth="20dp"
+            android:gravity="center"
+            android:visibility="gone" />
+            
+    </RelativeLayout>
+
+</RelativeLayout>

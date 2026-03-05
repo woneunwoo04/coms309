@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background_color">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/start_event_attendance_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="← Back"
+            android:textColor="@color/text_primary_fall"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Attendance"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_fall"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <!-- Event Name -->
+    <TextView
+        android:id="@+id/start_event_attendance_event_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Event Name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Session Status -->
+    <TextView
+        android:id="@+id/start_event_attendance_status_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No active session"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Session Code (Large Display) -->
+    <TextView
+        android:id="@+id/start_event_attendance_code_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Code: 1234"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/button_primary_fall"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/card_style"
+        android:padding="24dp"
+        android:visibility="gone" />
+
+    <!-- Time Remaining -->
+    <TextView
+        android:id="@+id/start_event_attendance_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time Remaining: 05:00"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <!-- Active Session Info -->
+    <TextView
+        android:id="@+id/start_event_attendance_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share this code with users to check in"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/text_secondary_fall"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+    <!-- Enable Geofencing Button -->
+    <Button
+        android:id="@+id/start_event_attendance_enable_geofence_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📍 Enable Geofencing (Optional)"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary_fall"
+        android:background="@drawable/button_secondary_fall"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Geofencing Section (Hidden by default) -->
+    <LinearLayout
+        android:id="@+id/start_event_attendance_geofence_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Geofencing Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a location on the map and set a radius. Users must be within this area to check in."
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary_fall"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Map View -->
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/start_event_attendance_map_view"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/start_event_attendance_use_location_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Center on My Location"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary_fall"
+            android:background="@drawable/button_secondary_fall"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Radius Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Radius (meters)"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/start_event_attendance_radius_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="e.g., 50" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- WiFi SSID Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="WiFi SSID (Optional)"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/start_event_attendance_wifi_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/start_event_attendance_disable_geofence_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disable Geofencing"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary_fall"
+            android:background="@drawable/button_secondary_fall"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/start_event_attendance_start_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Attendance Session"
+        android:textColor="@color/text_on_fall"
+        android:background="@drawable/button_primary_fall"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/start_event_attendance_end_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="End Session"
+        android:textColor="@color/text_on_fall"
+        android:background="@drawable/button_secondary_fall"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+</LinearLayout>
+
+</ScrollView>

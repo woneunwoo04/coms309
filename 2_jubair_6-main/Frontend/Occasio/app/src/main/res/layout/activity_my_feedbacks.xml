@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/button_primary_fall">
+
+        <Button
+            android:id="@+id/my_feedbacks_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="← Back"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Feedbacks"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/my_feedbacks_refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Refresh"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <!-- Add Feedback Button -->
+    <Button
+        android:id="@+id/my_feedbacks_add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💬 Add Feedback"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:backgroundTint="@color/button_primary_fall" />
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/my_feedbacks_empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No feedbacks yet.\n\nSubmit feedback after checking in to events!"
+        android:textSize="18sp"
+        android:textColor="@color/text_secondary"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_feedbacks_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp" />
+
+</LinearLayout>
+

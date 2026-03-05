@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Email Template"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="24dp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Template Name *"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/create_template_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g., WelcomeEmail"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subject *"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/create_template_subject_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email subject (use {{variable}} for placeholders)"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Body *"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💕 Your message will automatically be styled with pink &amp; cute design! Just type your content (HTML optional). Use {{variable}} for placeholders."
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary_fall"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:background="#fff0f5" />
+
+        <EditText
+            android:id="@+id/create_template_body_et"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:hint="Type your message here...\n\nExample: Welcome {{username}}! We're excited to have you join us for {{eventName}} on {{date}}."
+            android:inputType="textMultiLine"
+            android:gravity="top|start"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description (Optional)"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/create_template_description_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Template description"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/create_template_save_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_primary_fall"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/create_template_cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textColor="@color/text_primary_fall"
+                android:background="@drawable/button_secondary_fall"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

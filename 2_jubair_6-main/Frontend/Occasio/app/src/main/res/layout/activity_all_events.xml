@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_fall">
+    
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/primary_fall"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp">
+
+        <!-- Top Row: Title and Refresh -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/all_events_header_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Events"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_on_fall"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/all_events_refresh_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="🔄"
+                android:textSize="18sp"
+                android:textColor="@color/text_on_fall"
+                android:background="@drawable/button_accent_fall"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Quick Filter Chips -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/all_events_filter_chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp">
+
+                <Button
+                    android:id="@+id/all_events_filter_all_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/button_accent_fall"
+                    android:text="All"
+                    android:textColor="@color/text_on_fall"
+                    android:textSize="13sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp" />
+
+                <Button
+                    android:id="@+id/all_events_filter_registered_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/button_secondary_fall"
+                    android:text="Registered"
+                    android:textColor="@color/text_primary_fall"
+                    android:textSize="13sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp" />
+
+                <Button
+                    android:id="@+id/all_events_filter_favorites_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/button_secondary_fall"
+                    android:text="Favorites"
+                    android:textColor="@color/text_primary_fall"
+                    android:textSize="13sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp" />
+
+                <Button
+                    android:id="@+id/all_events_calendar_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/button_accent_fall"
+                    android:text="📅 Calendar"
+                    android:textColor="@color/text_on_fall"
+                    android:textSize="13sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+    
+    <!-- Hidden back button for compatibility -->
+    <Button
+        android:id="@+id/all_events_back_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="4dp">
+        
+        <EditText
+            android:id="@+id/all_events_search_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="🔍 Search events..."
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_fall"
+            android:textColorHint="@color/text_hint_fall"
+            android:background="@drawable/edittext_background_fall"
+            android:padding="14dp"
+            android:minHeight="48dp"
+            android:layout_marginEnd="8dp" />
+            
+        <Button
+            android:id="@+id/all_events_search_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="🔍"
+            android:textSize="18sp"
+            android:textColor="@color/text_on_fall"
+            android:background="@drawable/button_accent_fall"
+            android:padding="8dp" />
+            
+    </LinearLayout>
+
+
+    <!-- Fall-themed divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/button_primary_fall"
+        android:layout_marginBottom="16dp" />
+
+    <!-- No Events Message -->
+    <TextView
+        android:id="@+id/all_events_no_events_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="🍂 No events available at the moment"
+        android:textSize="18sp"
+        android:textColor="@color/text_secondary_fall"
+        android:visibility="gone"
+        android:layout_marginTop="32dp" />
+
+    <!-- Events List -->
+    <ScrollView
+        android:id="@+id/all_events_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/all_events_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp" />
+
+    </ScrollView>
+
+    </LinearLayout>
+    
+    <!-- Bottom Navigation Bar -->
+    <include
+        layout="@layout/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

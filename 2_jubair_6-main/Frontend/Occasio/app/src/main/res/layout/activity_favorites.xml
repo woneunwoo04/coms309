@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_fall"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/favorites_back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="←"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_on_fall"
+            android:background="@drawable/button_secondary_fall"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="❤️ My Favorites"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_fall"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/favorites_refresh_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="🔄"
+            android:textSize="16sp"
+            android:textColor="@color/text_on_fall"
+            android:background="@drawable/button_secondary_fall" />
+
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+        
+        <EditText
+            android:id="@+id/favorites_search_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="🔍 Search favorites..."
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_fall"
+            android:textColorHint="@color/text_hint_fall"
+            android:background="@drawable/edittext_background_fall"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp" />
+            
+        <Button
+            android:id="@+id/favorites_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔍"
+            android:textSize="16sp"
+            android:textColor="@color/text_on_fall"
+            android:background="@drawable/button_accent_fall"
+            android:padding="12dp" />
+            
+    </LinearLayout>
+
+    <!-- Fall-themed divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/button_primary_fall"
+        android:layout_marginBottom="16dp" />
+
+    <!-- No Favorites Message -->
+    <TextView
+        android:id="@+id/no_favorites_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No favorite events yet!\n\nBrowse events and tap ❤️ to add them to your favorites."
+        android:textSize="16sp"
+        android:textColor="@color/text_secondary_fall"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="64dp" />
+
+    <!-- Favorites List -->
+    <ScrollView
+        android:id="@+id/favorites_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/favorites_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+
+    </ScrollView>
+
+</LinearLayout>

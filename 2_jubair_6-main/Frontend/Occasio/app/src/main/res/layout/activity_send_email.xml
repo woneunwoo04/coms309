@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Email"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="24dp"
+            android:gravity="center" />
+
+        <!-- Email Type Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Type"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_fall"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/send_email_type_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/send_email_custom_radio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Custom Email"
+                android:textColor="@color/text_primary_fall"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/send_email_template_radio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Template Email"
+                android:textColor="@color/text_primary_fall" />
+        </RadioGroup>
+
+        <!-- Custom Email Layout -->
+        <LinearLayout
+            android:id="@+id/send_email_custom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recipient Email *"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/send_email_custom_to_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="user@example.com"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subject *"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/send_email_custom_subject_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email subject"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Message *"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💕 Your message will automatically be styled with pink &amp; cute design!"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary_fall"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:background="#fff0f5" />
+
+            <EditText
+                android:id="@+id/send_email_custom_message_et"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:hint="Type your message here..."
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:scrollbars="vertical"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Template Email Layout -->
+        <LinearLayout
+            android:id="@+id/send_email_template_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recipient Email *"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/send_email_template_to_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="user@example.com"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Template *"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/send_email_template_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Variables (JSON) - Optional"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/send_email_template_variables_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter variables as JSON: {&quot;username&quot;: &quot;John&quot;, &quot;date&quot;: &quot;2025-01-15&quot;}"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/send_email_template_variables_et"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="{&quot;username&quot;: &quot;John&quot;, &quot;date&quot;: &quot;2025-01-15&quot;}"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:scrollbars="vertical"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/send_email_send_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Send Email"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_primary_fall"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/send_email_cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textColor="@color/text_primary_fall"
+                android:background="@drawable/button_secondary_fall"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

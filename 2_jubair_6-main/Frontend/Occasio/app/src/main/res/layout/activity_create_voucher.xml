@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/create_voucher_cancel_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="←"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_secondary_fall"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Create Voucher"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary_fall"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background_fall"
+            android:padding="24dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voucher Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/create_voucher_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g., Starbucks $5 Voucher"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/create_voucher_description_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter voucher description"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:minLines="2"
+                android:maxLines="4"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cost Points"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary_fall"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/create_voucher_cost_points_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g., 500"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="16dp" />
+
+            <CheckBox
+                android:id="@+id/create_voucher_active_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active (users can redeem this voucher)"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary_fall"
+                android:checked="true"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/create_voucher_submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Voucher"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_secondary_fall"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

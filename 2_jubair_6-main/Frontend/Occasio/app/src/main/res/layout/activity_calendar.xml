@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_fall"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/primary_fall"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp">
+
+        <!-- Top Row: Month Navigation and Refresh -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/calendar_prev_month_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="◀"
+                android:textSize="20sp"
+                android:textColor="@color/text_on_fall"
+                android:background="@drawable/button_accent_fall"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/calendar_month_year_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="December 2025"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_on_fall"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/calendar_next_month_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="▶"
+                android:textSize="20sp"
+                android:textColor="@color/text_on_fall"
+                android:background="@drawable/button_accent_fall"
+                android:padding="8dp" />
+
+            <Button
+                android:id="@+id/calendar_refresh_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:text="🔄"
+                android:textSize="18sp"
+                android:textColor="@color/text_on_fall"
+                android:background="@drawable/button_accent_fall"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Filter Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/calendar_filter_all_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/button_accent_fall"
+                android:text="All"
+                android:textColor="@color/text_on_fall"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:minHeight="40dp" />
+
+            <Button
+                android:id="@+id/calendar_filter_registered_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Registered"
+                android:textSize="12sp"
+                android:textColor="@color/text_on_fall"
+                android:background="@drawable/button_accent_fall"
+                android:padding="8dp"
+                android:minHeight="40dp" />
+
+            <Button
+                android:id="@+id/calendar_filter_attended_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Attended"
+                android:textSize="12sp"
+                android:textColor="@color/text_on_fall"
+                android:background="@drawable/button_accent_fall"
+                android:padding="8dp"
+                android:minHeight="40dp" />
+
+            <Button
+                android:id="@+id/calendar_filter_favorited_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="Favorited"
+                android:textSize="12sp"
+                android:textColor="@color/text_on_fall"
+                android:background="@drawable/button_accent_fall"
+                android:padding="8dp"
+                android:minHeight="40dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Calendar Month View -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@color/card_background_fall">
+
+            <!-- Days of Week Header -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calendar_days_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Calendar Grid -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calendar_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Selected Date Events -->
+    <TextView
+        android:id="@+id/calendar_selected_date_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected Date Events"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary_fall"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Events List for Selected Date -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendar_events_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:nestedScrollingEnabled="false" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/calendar_back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Back"
+        android:textColor="@color/text_on_fall"
+        android:background="@drawable/button_accent_fall"
+        android:padding="12dp"
+        android:minHeight="48dp" />
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

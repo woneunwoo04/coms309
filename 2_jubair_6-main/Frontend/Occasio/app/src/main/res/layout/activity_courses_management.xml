@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/button_primary_fall">
+
+        <Button
+            android:id="@+id/courses_management_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="← Back"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📚 My Courses"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/courses_management_refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="🔄"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <!-- Create Course Button -->
+    <Button
+        android:id="@+id/courses_management_create_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Create New Course"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_primary_fall"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_margin="16dp" />
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/courses_management_empty_state_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No courses created yet.\n\nCreate your first course to get started!"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="32dp"
+        android:textColor="@color/text_secondary_fall"
+        android:visibility="gone" />
+
+    <!-- Course List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/courses_management_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp" />
+
+</LinearLayout>

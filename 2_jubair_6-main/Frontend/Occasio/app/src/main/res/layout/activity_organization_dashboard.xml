@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+    
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/background_fall"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/primary_fall"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <!-- Top Row: Title and Refresh -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/org_dashboard_welcome_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Welcome, Organization!"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_on_fall"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/org_dashboard_refresh_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="🔄"
+                    android:textSize="18sp"
+                    android:textColor="@color/text_on_fall"
+                    android:background="@drawable/button_accent_fall"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+            <!-- Add Event Button -->
+            <Button
+                android:id="@+id/org_dashboard_add_event_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="➕ Add Event"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_on_fall"
+                android:background="@drawable/button_primary_fall"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+        <!-- Events RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/org_dashboard_events_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp" />
+
+    </LinearLayout>
+    
+    <!-- Bottom Navigation Bar -->
+    <include
+        layout="@layout/bottom_navigation_bar_organization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+
+        <Button
+            android:id="@+id/start_session_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="← Back"
+            android:textColor="@color/text_primary_fall"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Attendance Session"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_fall"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <!-- Course Name -->
+    <TextView
+        android:id="@+id/start_session_course_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Course Name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Session Status -->
+    <TextView
+        android:id="@+id/start_session_status_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No active session"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Session Code (Large Display) -->
+    <TextView
+        android:id="@+id/start_session_code_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Code: 1234"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/button_primary_fall"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/card_style"
+        android:padding="24dp"
+        android:visibility="gone" />
+
+    <!-- Time Remaining -->
+    <TextView
+        android:id="@+id/start_session_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time Remaining: 10:00"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+    <!-- Active Session Info -->
+    <TextView
+        android:id="@+id/start_session_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share this code with students to check in"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:textColor="@color/text_secondary_fall"
+        android:visibility="gone" />
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/start_session_start_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Session"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_primary_fall"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/start_session_end_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="End Session"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_secondary_fall"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+</LinearLayout>

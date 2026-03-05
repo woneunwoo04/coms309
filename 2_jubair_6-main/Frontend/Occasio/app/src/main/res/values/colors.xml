@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Orange Theme Colors -->
+    <color name="orange_primary">#FF8C42</color>
+    <color name="orange_dark">#E67E22</color>
+    <color name="orange_light">#FFA366</color>
+    <color name="orange_accent">#FF6B00</color>
+    
+    <!-- Legacy fall colors for compatibility -->
+    <color name="fall_orange">#FF8C42</color>
+    <color name="fall_deep_orange">#E67E22</color>
+    <color name="fall_brown">#654321</color>
+    <color name="fall_dark_brown">#4A3428</color>
+    <color name="fall_red">#D2691E</color>
+    <color name="fall_gold">#DAA520</color>
+    <color name="fall_cream">#FFF8F0</color>
+    <color name="fall_light_brown">#F5E6D3</color>
+    <color name="fall_maroon">#800000</color>
+    
+    <!-- Primary Colors -->
+    <color name="primary_fall">#FF8C42</color>
+    <color name="primary_dark_fall">#E67E22</color>
+    <color name="accent_fall">#FF6B00</color>
+    
+    <!-- Background Colors -->
+    <color name="background_fall">#FFF8F0</color>
+    <color name="surface_fall">#FFFFFF</color>
+    <color name="card_background_fall">#FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary_fall">#333333</color>
+    <color name="text_secondary_fall">#666666</color>
+    <color name="text_on_fall">#FFFFFF</color>
+    
+    <!-- Button Colors -->
+    <color name="button_primary_fall">#FF8C42</color>
+    <color name="button_secondary_fall">#FF6B00</color>
+    <color name="button_accent_fall">#E67E22</color>
+    
+    <!-- Legacy colors for compatibility -->
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Iowa State Colors (keeping for reference) -->
+    <color name="iowa_state_cardinal">#CC0000</color>
+    <color name="iowa_state_gold">#FFCC00</color>
+    
+    <!-- Additional fall colors -->
+    <color name="fall_leaf_green">#8FBC8F</color>
+    <color name="fall_rust">#B7410E</color>
+    <color name="fall_burnt_orange">#CC5500</color>
+    
+    <!-- Legacy color references for compatibility -->
+    <color name="background_color">@color/background_fall</color>
+    <color name="primary_text_color">@color/text_primary_fall</color>
+    <color name="secondary_text_color">@color/text_secondary_fall</color>
+    <color name="iowa_state_dark_cardinal">@color/fall_maroon</color>
+    
+    <!-- Feedback system color aliases -->
+    <color name="text_primary">@color/text_primary_fall</color>
+    <color name="text_secondary">@color/text_secondary_fall</color>
+    <color name="button_secondary">@color/button_secondary_fall</color>
+    
+    <!-- Rating colors (pink theme for star ratings) -->
+    <color name="rating_pink">#FF6B9D</color>
+    <color name="rating_pink_light">#FFB3D1</color>
+    
+    <!-- Additional UI Colors -->
+    <color name="success_color">#4CAF50</color>
+    <color name="error_color">#F44336</color>
+    <color name="warning_color">#FF9800</color>
+    <color name="info_color">#2196F3</color>
+    
+    <!-- Enhanced Event UI Colors -->
+    <color name="text_hint_fall">#A0A0A0</color>
+    <color name="icon_color_fall">#8B4513</color>
+    <color name="category_background_fall">#E8D5B7</color>
+    <color name="image_placeholder_fall">#F5F5F5</color>
+    <color name="link_text_fall">#D2691E</color>
+</resources>

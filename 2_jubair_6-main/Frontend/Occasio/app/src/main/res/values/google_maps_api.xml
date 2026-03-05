@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    TODO: Replace "YOUR_API_KEY" with your actual Google Maps API key.
+    
+    To get a Google Maps API key:
+    1. Go to https://console.cloud.google.com/
+    2. Create a new project or select an existing one
+    3. Enable the Maps SDK for Android
+    4. Create credentials (API key)
+    5. Restrict the API key to Android apps (optional but recommended)
+    6. Replace "YOUR_API_KEY" below with your actual API key
+    
+    For development/testing, you can use a debug key without restrictions.
+    For production, you MUST restrict the API key.
+    -->
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">AIzaSyCdCGhXJT4r8zt99gGNIJmCUHfoPOG4TdM</string>
+</resources>
+
+
+
+
+
+
+
+
+

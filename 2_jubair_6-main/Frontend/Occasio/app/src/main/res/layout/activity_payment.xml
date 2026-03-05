@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background_fall">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete Payment"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary_fall"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Event:"
+        android:textSize="16sp"
+        android:textColor="@color/text_secondary_fall"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/payment_event_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Event Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary_fall"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount:"
+        android:textSize="16sp"
+        android:textColor="@color/text_secondary_fall"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/payment_amount_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/button_primary_fall"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/payment_pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay Now"
+        android:textSize="18sp"
+        android:textColor="@color/text_on_fall"
+        android:background="@drawable/button_primary_fall"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:minHeight="56dp" />
+
+    <Button
+        android:id="@+id/payment_cancel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary_fall"
+        android:background="@drawable/button_secondary_fall"
+        android:padding="12dp"
+        android:minHeight="48dp" />
+
+</LinearLayout>
